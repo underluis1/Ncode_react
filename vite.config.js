@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['@supabase/supabase-js'], // Aggiunto Supabase come dipendenza esterna
+      external: [], // Aggiunto Supabase come dipendenza esterna
     },
   },
 })
