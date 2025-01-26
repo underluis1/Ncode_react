@@ -1,0 +1,102 @@
+.page {
+    margin-left: 20px; /* Margine a sinistra per evitare sovrapposizioni con la sidebar */
+    margin-right: 20px;
+    padding: 20px; /* Padding per una vista gradevole */
+    background-color: #ffffff; /* Colore di sfondo per le pagine */
+    border-radius: 5px; /* Angoli arrotondati */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra per un effetto di profondità */
+    width: calc(100%-0px); /* Larghezza al 100% meno margini */
+    height: calc(100vh - 40px); /* Imposta l'altezza della pagina al 100% della viewport meno il padding */
+    position: relative; /* Necessario per il posizionamento */
+    display: flex; /* Imposta il layout a flexbox */
+    flex-direction: column; /* Disposizione verticale */
+}
+
+h1{
+    color: #000000;
+}
+
+h2{
+    color: #000000;
+}
+
+li{
+    color: #000000;
+}
+
+input{
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+
+button{
+    padding: 12px;
+    margin-left: 8px;
+    background-color: cadetblue;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: rgb(144, 202, 204);
+}
+
+.testing{
+    display: flex; /* Imposta il layout come flexbox */
+    flex-direction: row; /* Assicura che gli elementi siano disposti in una riga */
+    align-items: center; /* Allinea verticalmente al centro */
+    justify-content: space-between; /* Spazio uniforme tra gli elementi */
+    gap: 10px; /* Spazio tra gli elementi */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    background-color: rgb(255, 255, 255); /* Colore di sfondo per la div-row */
+}
+
+ul {
+    flex-grow: 1; /* Permette alla lista di occupare lo spazio rimanente */
+    overflow-y: auto; /* Aggiungi una barra di scorrimento verticale se necessario */
+    padding-left: 4px; /* Aggiungi padding a sinistra per creare margine alla scrollbar */
+    list-style-type: none; /* Rimuovi i punti elenco */
+    margin: 0; /* Rimuovi il margine predefinito */
+}
+
+/* Stili per la scrollbar in WebKit (Chrome, Safari, Edge) */
+ul::-webkit-scrollbar {
+    width: 12px; /* Larghezza della scrollbar */
+}
+
+ul::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Colore di sfondo della traccia */
+    border-radius: 10px; /* Angoli arrotondati della traccia */
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #888; /* Colore della parte mobile della scrollbar */
+    border-radius: 10px; /* Angoli arrotondati della parte mobile */
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Colore della parte mobile al passaggio del mouse */
+}
+
+/* Stili per la scrollbar in Firefox */
+ul {
+    scrollbar-width: thin; /* Imposta la larghezza della scrollbar */
+    scrollbar-color: cadetblue #f1f1f1; /* Colore della parte mobile e della traccia */
+}
+
+.div-row {
+    display: flex; /* Imposta il layout come flexbox */
+    flex-direction: row; /* Assicura che gli elementi siano disposti in una riga */
+    align-items: center; /* Allinea verticalmente al centro */
+    justify-content: space-between; /* Spazio uniforme tra gli elementi */
+    gap: 10px; /* Spazio tra gli elementi */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    background-color: antiquewhite; /* Colore di sfondo per la div-row */
+    padding: 10px; /* Padding per una migliore visualizzazione */
+    border-radius: 5px; /* Angoli arrotondati */
+}
