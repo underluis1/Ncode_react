@@ -22,6 +22,7 @@ h2{
 
 li{
     color: #000000;
+    align-content: center;
 }
 
 input{
@@ -99,4 +100,9 @@ ul {
     background-color: antiquewhite; /* Colore di sfondo per la div-row */
     padding: 10px; /* Padding per una migliore visualizzazione */
     border-radius: 5px; /* Angoli arrotondati */
+}
+
+
+.div-2button{
+    padding-right: 10px;
 }

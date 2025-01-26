@@ -19,7 +19,7 @@ function Home() {
         .order("created_at", { ascending: false }); // Ordina per created_at dal più recente al più vecchio
 
       if (error) {
-        console.error("Error fetching products:", error);
+        alert("Error fetching products:", error);
       } else {
         setProducts(data); // Imposta i prodotti nello stato
       }
@@ -46,11 +46,14 @@ function Home() {
         .from("product")
         .update(data)
         .eq("id", currentProduct.id);
-      if (error) console.error("Error updating product:", error);
+      alert("hai modificato il prodotto, ricarica la pagina");
+
+      if (error) alert("Error updating product:", error);
     } else {
       // Aggiungi nuovo prodotto
       const { error } = await supabase.from("product").insert([data]);
-      if (error) console.error("Error adding product:", error);
+      alert("hai creato un nuovo prodotto, ricarica la pagina");
+      if (error) alert("Error adding product:", error);
     }
     handleCloseModal();
     // Ricarica i prodotti dopo l'inserimento/modifica
@@ -59,7 +62,8 @@ function Home() {
 
   const handleDelete = async (id) => {
     const { error } = await supabase.from("product").delete().eq("id", id);
-    if (error) console.error("Error deleting product:", error);
+    alert("hai eliminato il prodotto, ricarica la pagina");
+    if (error) alert("Error deleting product:", error);
     // Ricarica i prodotti dopo l'eliminazione
     fetchProducts();
   };
@@ -91,7 +95,7 @@ function Home() {
               <p>
                 {product.name}, prezzo= €{product.price}
               </p>
-              <div>
+              <div className="div-2button">
                 <button onClick={() => handleOpenModal(product)}>
                   Modifica
                 </button>

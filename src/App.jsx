@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
@@ -12,6 +12,9 @@ function App() {
       <Sidebar />
       <div className="main-content">
         <Routes>
+          {/* Redirect dalla root "/" a "/home" */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
+
           <Route path="/auth" element={<Auth />} />
           <Route
             path="/home"
