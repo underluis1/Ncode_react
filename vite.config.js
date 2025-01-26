@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-router-dom'], // Specifica le dipendenze da escludere dal bundle
+      external: ['react-router-dom', '@supabase/supabase-js'], // Aggiunto Supabase come dipendenza esterna
     },
   },
 })
